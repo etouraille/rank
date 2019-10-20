@@ -1,0 +1,36 @@
+version: '3'
+services:
+  php:
+      build: php
+      volumes:
+          - ./../.:/src
+      links:
+       - db
+      #network_mode: host
+  db:
+    image: mariadb
+    restart: always
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=failleDeSecuritet
+      - MYSQL_DATABASE=symfony
+      - MYSQL_USER=ed
+      - MYSQL_PASSWORD=b1otope
+      - TERM=dumb
+    volumes:
+      - ./db:/etc/mysql/conf.d
+      - ./:/opt
+    tty: true
+
+  phpmyadmin:
+     image: corbinu/docker-phpmyadmin
+     restart: always
+     ports :
+      - "85:80"
+     environment:
+      - MYSQL_USERNAME=root
+      - MYSQL_PASSWORD=failleDeSecuritet
+      - MYSQL_PORT_3306_TCP_ADDR=db
+     links:
+      - db:mysql

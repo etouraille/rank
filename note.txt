@@ -1,0 +1,16 @@
+Une campagne c'est une requête et une url que l'on cherche à faire monter.
+    Une campagne c'est aussi des publications sur des blogs; avec une url.
+    que l'on doit pouvoir supprimer.
+    c'est aussi l'évaluation de cette évolution.
+    et c'est un revenu.
+
+On peut essayer de faire descendre une page .... liste des pages apres l'url que l'on cherche à faire descendre
+
+mettre des lien vers les blogs sur les blogs ... une liste de référence les unes vers les autres.
+
+une requête sur google. une mesure de rank. avec des proxy, on cherche a faire une mesure sur un rank.
+    si la mesure est aveugle on change de proxy jusqu'à ce que ça passe.
+    la mesure est lancée une fois par jour.
+
+
+lancer le script de stockage des proxy pour en recupérer de nouveau.

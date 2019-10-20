@@ -25,3 +25,13 @@ services:
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
+    udpate_entity:
+        class: App\Metier\CommandHandler\UpdateEntityCommandHandler
+        arguments: ['@doctrine.orm.entity_manager']
+        tags:
+          - { name: command_handler, handles: App\Metier\Command\UpdateEntity }
+    fetch_random_entity:
+        class: App\Metier\CommandHandler\FetchRandomEntityCommandHandler
+        arguments: ['@doctrine.orm.entity_manager']
+        tags:
+        - { name: command_handler, handles: App\Metier\Command\FetchRandomEntity }
